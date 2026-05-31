@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Little Game For You</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="assets/blue_yungkai.mp3" type="audio/mp3">
+</audio>
+
+<!-- START SCREEN -->
+<div id="startScreen" class="start-screen">
+
+    <div class="start-content">
+
+        <h1>Hai Alynne 🦄 </h1>
+
+          <p>
+            Aku punya permainan kecil buat kamu 🤭
+          </p>
+
+          <button onclick="startGame()" class="start-btn">
+            Klik Aku 💖
+        </button>
+
+    </div>
+
+</div>  
+
+  <!-- Background -->
+  <div class="overlay"></div>
+  <div class="stars"></div>
+
+  <!-- GAME CONTAINER -->
+<div class="game-container" id="gameBox" style="display:none;">
+
+  <h1>Special Game for You 🦄</h1>
+  <p>Balik 2 Kartu yang Sama!</p>
+
+  <div class="grid">
+
+    <div class="card" data-emoji="🦄">🦄</div>
+    <div class="card" data-emoji="🌈">🌈</div>
+    <div class="card" data-emoji="🦄">🦄</div>
+    <div class="card" data-emoji="✨">✨</div>
+
+    <div class="card" data-emoji="✨">✨</div>
+    <div class="card" data-emoji="🍭">🍭</div>
+    <div class="card" data-emoji="🌈">🌈</div>
+    <div class="card" data-emoji="💜">💜</div>
+
+    <div class="card" data-emoji="💜">💜</div>
+    <div class="card" data-emoji="🌷">🌷</div>
+    <div class="card" data-emoji="🍭">🍭</div>
+    <div class="card" data-emoji="🌷">🌷</div>
+
+  </div>
+
+</div>
+
+<!-- GIFT BOX -->
+<div class="gift-container hidden" id="giftBox">
+
+  <div class="gift" onclick="openGift()">
+    🎁
+  </div>
+
+  <p class="gift-text">
+    Klik kadonya 💖
+  </p>
+
+</div>
+
+<!-- FINAL MESSAGE -->
+<div class="message-box hidden" id="messageBox">
+
+  <img src="assets/unicorn4.png" class="couple">
+
+  <div class="message hidden" id="messageContent">
+
+Untuk Rahmadania Arrum Pratisa 🦄✨
+
+<br><br>
+
+Aku tahu akhir-akhir ini mungkin banyak hal yang bikin capek dan kepikiran
+
+<br><br>
+
+Tapi jangan lupa, kamu sudah menjalani banyak hal sampai hari ini.
+Jadi kalau sekarang lagi capek atau nggak mood, mungkin itu cuma tanda kalau kamu perlu sedikit waktu untuk diri sendiri 💜
+
+<br><br>
+
+Kalau lelah, istirahatlah sebentar.
+Kalau sedih, nggak apa-apa untuk merasakannya.
+Yang penting jangan menyerah pada dirimu sendiri 
+
+<br><br>
+
+Semoga game kecil tadi bisa bikin kamu tersenyum walaupun cuma sebentar ✨
+
+<br><br>
+
+Tetap semangat yaa.
+Hari yang berat pasti akan berlalu, dan semoga besok membawa hal-hal baik untukmu 🌈 ✨
+
+<br><br>
+
+Jaga kesehatan, jangan lupa istirahat yang cukup, dan tetap percaya pada dirimu sendiri yaa 💖
+
+<br><br>
+
+Karena kamu lebih kuat daripada yang kamu kira ✨🌷
+
+<br><br>
+
+Oh iya...
+Aku masih ingat unicorn yang waktu itu nggak jadi dibeli karena nggak ada di tokonya 🦄🥹
+
+Semoga nanti kalau kita jalan lagi,
+dia sudah nongkrong manis di rak dan siap dijemput yaa 😊
+
+<br><br>
+
+Dari,
+Nyota kecilmu 😊🦄
+
+  </div>
+
+  <div class="message" id="typingText"></div>
+
+</div>
+
+<!-- TOMBOL LANJUT -->
+<div id="flowerButtonContainer" class="hidden">
+
+    <button
+        id="flowerBtn"
+        class="start-btn"
+        onclick="showFlower()">
+
+        Buat kamu🌷
+
+    </button>
+
+</div>
+
+<!-- FLOWER PAGE -->
+<div id="flowerBox" class="hidden">
+
+    <iframe
+        src="flower/index.html"
+        width="100%"
+        height="100%"
+        frameborder="0">
+    </iframe>
+
+</div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
